@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>🗽 New York City</title>
+    <style>
+      body {
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      }
+      header {
+        font-family: Helvetica, sans-serif;
+      }
+      h1,
+      h2 {
+        font-weight: 900;
+        line-height: 48px;
+        margin: 0;
+      }
+      h1 {
+        font-size: 48px;
+        text-align: start;
+      }
+      h2 {
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: left;
+      }
+      nav {
+        text-transform: uppercase;
+      }
+      nav ul {
+        list-style-type: none;
+      }
+      nav li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+      nav a {
+        font-size: 1.3em;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        padding: 3px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        color: #fec830;
+        background-color: #1f1f21;
+      }
+      .h2-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .image-string {
+        font-family: Helvetica;
+        font-size: 48px;
+        font-weight: bold;
+        color: white;
+        text-shadow: #1f1f21 1px 1px;
+      }
+      .banner-image p {
+        font-family: monospace;
+        text-shadow: inherit;
+        font-size: 24px;
+        color: white;
+        max-width: 100%;
+      }
+      .banner-image h3,
+      p {
+        margin: 35px 35px 40px 15px;
+      }
+      .banner-image {
+        margin: 5px 0;
+        height: 500px;
+        background: url("https://images.unsplash.com/photo-1507112506923-71a269c8a25f?ixli");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: center;
+      }
+      button {
+        border-radius: 5px;
+        border: 1px solid #1f1f21;
+        background-color: #1f1f21;
+        color: #fec830;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 22px;
+        padding: 8px 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: 0px 2px 5px #1f1f21;
+        transition: all 200ms ease;
+      }
+      .button-ny {
+        text-align: center;
+      }
+      button:hover {
+        color: #1f1f21;
+        background-color: #fec830;
+        border: none;
+      }
+      .wrapper {
+        display: flex;
+        border-spacing: 10px;
+      }
+      .plan-ahead {
+        display: flexbox;
+        align-content: flex-start;
+        background-color: white;
+        flex: 0 0 65%;
+      }
+      .plan-ahead h3 {
+        font-family: helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 40px;
+        text-align: center;
+      }
+      .things-plan {
+        display: grid;
+        grid-template-columns: repeat(2, 0.8fr);
+        grid-gap: 20px;
+        grid-auto-rows: minmax(17px, auto);
+        justify-content: space-evenly;
+      }
+      .maps-guides {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .attraction-passes {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .tickets-deals {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .basic-info {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .things-plan a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: #1f1f21;
+        text-decoration: none;
+        text-align: center;
+      }
+      .things-plan img {
+        width: auto;
+        height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .things-plan div {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      .guide-native {
+        display: flexbox;
+        align-items: center;
+        flex: 1;
+        width: auto;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 100%;
+        background-color: #1f1f21;
+        margin: 0 15px;
+      }
+      .guide-native img {
+        display: inline;
+        max-width: 100%;
+        max-height: 100%;
+        background-position: center;
+      }
+      article h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        color: #1f1f21;
+        padding: 6px 16px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      article p {
+        font-family: monospace;
+        font-size: 14px;
+        color: #1f1f21;
+        text-align: justify;
+        margin-top: 0;
+      }
+      .full-article {
+        display: flex;
+        justify-content: center;
+      }
+      .see-city h3 {
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 22px;
+      }
+      .see-city img {
+        width: auto;
+        height: 310px;
+        display: inline-block;
+        justify-content: space-around;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🍎 NYC - New York City</h1>
+      <div class="h2-nav">
+        <h2>🌙 Welcome to the city that <em>never sleeps</em></h2>
+        <nav>
+          <ul>
+            <li><a href="#">🏙 The City</a></li>
+            <li><a href="#">🧭 Explore</a></li>
+            <li><a href="#">🏨 Stay</a></li>
+            <li><a href="#">🚕 Navigate</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr />
+    </header>
+    <div class="banner-image">
+      <h3 class="image-string">NYC is made up of five boroughs</h3>
+      <p>
+        In this city, no two experiences are alike. To all who refuses to settle
+        for sameness: <strong>we welcome you. Always.</strong>
+      </p>
+    </div>
+    <div class="button-ny">
+      <button class="buttonNy">Find your NYC</button>
+    </div>
+    <br />
+    <div class="wrapper">
+      <section class="plan-ahead">
+        <h3>Plan Ahead</h3>
+        <span class="things-plan">
+          <div class="maps-guides">
+            <a href="#">Maps & Guides</a>
+            <br />
+            <img
+              src="https://image.flaticon.com/icons/svg/106/106165.svg"
+              alt="Maps"
+            />
+          </div>
+          <br />
+          <div class="attraction-passes">
+            <a href="#">Attraction Passes</a>
+            <br />
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-camera-512.png"
+              alt="attraction"
+            />
+          </div>
+          <div class="tickets-deals">
+            <a href="#">Tickets & Deals</a>
+            <br />
+            <img
+              src="https://visualpharm.com/assets/184/Two%20Tickets-595b40b85ba036ed117db664.svg"
+              alt="tickets"
+            />
+          </div>
+          <div class="basic-info">
+            <a href="#">Basic Info</a>
+            <br />
+            <img
+              src="http://chittagongit.com//images/info-icon-free/info-icon-free-28.jpg"
+              alt="info"
+            />
+          </div>
+        </span>
+      </section>
+      <article>
+        <div class="guide-native">
+          <img src="3765c625.jpeg" alt="traveler" />
+        </div>
+        <h3>First Time Guide to NYC by a Native New Yorker</h3>
+        <p>
+          "I’m so proud to be a native New Yorker and I love to help first
+          timers plan their first trip to New York City. I’ve made a five day
+          itinerary for NYC with advice on what to see and eat mostly in
+          Manhattan for all budgets. <br />
+          New York is HUGE. I sometimes joke that you need about two weeks to
+          just cover the major sights, which is true since I didn’t even include
+          Coney Island (Brooklyn). However, 5 full days in New York City is a
+          perfect start to feeling at home in New York."
+        </p>
+        <div class="full-article">
+          <button onclick="readFullArticle();">
+            Read the full article here
+          </button>
+        </div>
+      </article>
+    </div>
+    <footer class="see-city">
+      <hr />
+      <h3>#SeeYourCity</h3>
+      <span class="images">
+        <img
+          src="https://images.unsplash.com/photo-1520222984843-df35ebc0f24d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+          alt="flatiron-building"
+          class="flatiron-building"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1482857199404-9b2f21bde914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+          alt="skyscraper"
+          class="skyscrapper"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1528319443443-3f7c81426519?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+          alt="usa-flag"
+          class="usa-flag"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1507669067760-d0d029c87bed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+          alt="street-signs"
+          class="street-signs"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1516663414858-9875637f4d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+          alt="times-square"
+          class="times-square"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1457302649866-aa1ada2db703?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+          alt="wtc"
+          class="wtc"
+        />
+      </span>
+    </footer>
+    <script>
+      function readFullArticle() {
+        window.location =
+          "https://www.wanderlustingk.com/travel-blog/new-york-city-5-days";
+      }
+      function findYourNy() {
+        let userName = prompt("What is your name?");
+        let visitNy = prompt(
+          userName + ", would you like to be enchanted by New York City?"
+        );
+        visitNy = visitNy.toLowerCase();
+        if (visitNy === "yes") {
+          alert(
+            "Hello" +
+              " " +
+              userName +
+              ", welcome to the concrete jungle where dreams are made of ✨"
+          );
+        } else {
+          alert("Sorry" + " " + userName + ", but you are lame 😝");
+        }
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", findYourNy);
+    </script>
+  </body>
+</html>
